@@ -15,13 +15,16 @@ function degreefunc(celsius) {
 console.log(degreefunc(20))
 
 
-function reversenumber(n) {
-    let l = n.toString()
-    let m = l.split('').reverse().join('');
-    return m;
+function reverseMethod(num) {
+    let reversenumber = 0;
+    while (num!=0) {
+        reversenumber = reversenumber * 10 +(num % 10);
+        num = Math.floor(num / 10);
+    }
+    return reversenumber;
 }
-console.log(reversenumber(123))
-console.log(reversenumber(8790))
+console.log(reverseMethod(123))
+console.log(reverseMethod(8790))
 
 
 function countVowels(text) {
@@ -36,7 +39,7 @@ function countVowels(text) {
     }
     return count;
 }
-console.log(countVowels("salam"));
+console.log(countVowels("Salam"))
 
 
 let num1 = prompt("Birinci ededi daxil edin.")
